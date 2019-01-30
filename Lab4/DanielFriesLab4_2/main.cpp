@@ -1,22 +1,49 @@
 //  Daniel Fries
 //  Lab 4, Project 2
-//  Testing the largest and smallest of 2 numbers 1-100
+//  Testing the largest and smallest of a set of numbers between 1-100
+
+//  This program throws an error as expected when negative numbers are entered, but it also records those numbers.  This is a bug to be fixed.
 
 #include <iostream>
+
 using namespace std;
+
+string name;
+int num = 1000000;
+int high, low;
+int i = 0;
 
 int main()
 {
-    short num1, num2;
 
-    cout << "Enter two random numbers 1 - 100: " << endl;
-    cin >> num1 >> num2;
+    while ( num != 0 )
+    {
+        cout << "Enter some integers between 1 and 100.  Enter 0 to when done.\n";
+        cin >> num;
 
-    while ( num1 < 1 || num1 > 100 || num2 < 1 || num2 > 100 )
+        if ( num < 0 || num > 100 )
+            cout << "Only integers 1-100, please.\n";
+
+        else if ( i == 0 )
         {
-        cout << "Only numbers between 1 and 100, smart guy.\n";
-        cin >> num1 >> num2;
+            high = num;
+            low = num;
         }
 
-    return 0;
+        else
+        {
+            if ( num > high && num != 0 )
+                high = num;
+            else if ( num < low && num != 0 )
+                low = num;
+        }
+        i++;
+    }
+    cout << "Highest: " << high << endl;
+    cout << "Lowest: " << low << endl;
+
+
+
+
+return 0;
 }
