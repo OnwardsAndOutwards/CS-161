@@ -14,5 +14,8 @@ int main()
     cout << "       Paper beats Rock" << endl;
     cout << "     Scissors beats Paper" << endl;
 
+    bool playing = true;
+
+
     return 0;
 }
