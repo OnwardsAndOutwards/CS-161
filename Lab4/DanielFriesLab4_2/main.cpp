@@ -30,7 +30,7 @@ int main()
             low = num;
         }
 
-        else
+        else if ( num >= 1 || num <= 100 )
         {
             if ( num > high && num != 0 )
                 high = num;
