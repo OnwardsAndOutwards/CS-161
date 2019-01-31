@@ -1,3 +1,8 @@
+//  Daniel Fries
+//  Lab 6
+//  CS 161+
+//  Computing the area of different shapes.
+
 #include <iostream>
 
 using namespace std;
