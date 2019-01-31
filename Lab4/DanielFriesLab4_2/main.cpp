@@ -3,6 +3,8 @@
 //  Testing the largest and smallest of a set of numbers between 1-100
 
 //  This program throws an error as expected when negative numbers are entered, but it also records those numbers.  This is a bug to be fixed.
+//  Fulfills the requirements, though!
+
 
 #include <iostream>
 
