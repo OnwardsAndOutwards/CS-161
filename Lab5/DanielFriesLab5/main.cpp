@@ -15,7 +15,7 @@ int main()
 
  //  int players = 1;
 
- int sticks = 11;
+ int sticks=11;
  bool playerTurn = true;
  bool playing = true;
  bool playerOneTurn = true;
@@ -32,6 +32,10 @@ int main()
 
  while ( playing )
  {
+     for (int i=1; i<sticks; i++)
+        cout << "|";
+
+
 
 
 
@@ -72,7 +76,7 @@ int main()
 
  // announce winner using player number
 
- }
+
 
  // announce winner using player number
 
