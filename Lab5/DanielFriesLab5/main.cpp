@@ -15,10 +15,11 @@ int main()
 
  //  int players = 1;
 
- int sticks=11;
+ int sticks = 11;
  bool playerTurn = true;
  bool playing = true;
  bool playerOneTurn = true;
+ bool playerTwoTurn = false;
  int num;
 
 
@@ -27,13 +28,37 @@ int main()
  cout << "Players will take turns removing 1, 2, or 3 sticks from the initial " << sticks << ".\n" << endl;
  cout << "Player 1, it's your turn!\n" << endl;
  cout << "The game currently looks like this:\n" << endl;
- cout << "|||||||||||";
+
+ for ( int i = 1; i < sticks; i++ )
+ {
+     cout << "|";
+ }
+
 
 
  while ( playing )
  {
-     for (int i=1; i<sticks; i++)
-        cout << "|";
+    cout << "\n\nHow many sticks would you like to remove? (1, 2, or 3)\n" << endl;
+    cin >> num;
+
+    if ( num >= 1 && num <= 3 && num <= sticks )
+        {
+        sticks -= num;
+        cout << "\nThe game looks like this:\n" << endl;
+        for ( int i = 1; i < sticks; i++ )
+            cout << "|";
+        }
+    else if ( num >= sticks )
+    {
+        cout << "Please select a number smaller than the amount of sticks left. " << endl;
+        cin >> num;
+    }
+    else
+        cout << "Please choose 1, 2 or 3. " << endl;
+        cin >> num;
+
+    if ( sticks = 0 )
+        playing == false;
 
 
 
@@ -46,18 +71,18 @@ int main()
 //    cout << "How many sticks would you like to remove? (1, 2, or 3)" << endl;
 //    cin >> num;
 //
-//    if ( num >= 1 && num <= 3 )
-//        {
-//        sticks -= num;
-//        cout << "The game looks like this: " << endl;
-//        cout << sticks << endl;
-//        }
-//    else
-//        cout << "Pleaes choose 1, 2 or 3. " << endl;
-//        cin >> num;
-//
-//    if ( sticks = 0 )
-//        playing == false;
+    if ( num >= 1 && num <= 3 )
+        {
+        sticks -= num;
+        cout << "The game looks like this: " << endl;
+        cout << sticks << endl;
+        }
+    else
+        cout << "Pleaes choose 1, 2 or 3. " << endl;
+        cin >> num;
+
+    if ( sticks = 0 )
+        playing == false;
 
 
  // 2 -- get and validate input
@@ -82,3 +107,14 @@ int main()
 
  return 0;
 }
+int board(int x)
+{
+    for ( int i = 1; i > x; i++ )
+    cout << "|";
+}
+//float circle(float x)  //  multiplies the pi by the radius squared
+//{
+//    float area;
+//    area = pi*x*x;
+//    return(area);
+//}

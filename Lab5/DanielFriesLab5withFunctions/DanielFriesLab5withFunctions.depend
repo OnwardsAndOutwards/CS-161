@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1549407959 source:c:\users\student\desktop\cs-161\lab5\danielfrieslab5withfunctions\main.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+
