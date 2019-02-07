@@ -2,8 +2,7 @@
 1548884157 source:c:\users\tfrie\documents\c++\lab5\danielfrieslab5\main.cpp
 	<iostream>
 
-1549579767 source:c:\users\student\desktop\cs-161\lab5\danielfrieslab5\main.cpp
+1549582252 source:c:\users\student\desktop\cs-161\lab5\danielfrieslab5\main.cpp
 	<iostream>
-	<ctime>
-	<cstdlib>
+	<string>
 

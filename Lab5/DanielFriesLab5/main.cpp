@@ -3,124 +3,77 @@
 //  CS 161+
 //  Nim
 
-
 #include <iostream>
-#include <ctime>
-#include <cstdlib>
-
+#include <string>
 using namespace std;
-
 int main()
 {
+	const int total = 11;
+	int n, sticks;
+	bool winner = false;
 
- //  int players = 1;
+	sticks = total;
 
- int sticks = 11;
- bool playerTurn = true;
- bool playing = true;
- bool playerOneTurn = true;
- bool playerTwoTurn = false;
- int num;
- string replay;
+	cout << "" << endl;
+	cout << " *         *     *     *           *             " << endl;  //  A CGI masterpiece, I know.
+	cout << " * *       *     *     * *       * *             " << endl;
+	cout << " *   *     *     *     *   *   *   *             " << endl;
+	cout << " *     *   *     *     *     *     *             " << endl;
+	cout << " *       * *     *     *           *             " << endl;
+	cout << " *         *     *     *           *             \n" << endl;
 
+	cout << "Welcome to Nim!\n\n" << endl;
+	cout << "Players will take turns removing 1, 2, or 3 sticks from the initial 11.\n\nThe player removing the last stick wins!\n" << endl;
 
+	do
+	{
+		if (sticks > 0)
+		{
+			cout << "\nPlayer 1, it's your turn!\n" << endl;
+            cout << "The game currently looks like this:\n" << endl;
+            for ( int i = 0; i < sticks; i++ )                       //  It's a for loop!
+                cout << "|";
+			cout << "\n\nHow many sticks would you like to remove? (1, 2, or 3)\n" << endl;
+			cin >> n;
 
- cout << "Welcome to Nim!\n" << endl;
- cout << "Players will take turns removing 1, 2, or 3 sticks from the initial " << sticks << ".\n" << endl;
+			if (n >= 1 && n <= 3 && ( sticks-n  >= -1))  //  Checks to make sure number of sticks is correct.
+			{
+				sticks -= n;
+			}
+			else
+			{
+				cout << "INVALID INPUT!\n" << endl;
+			}
+			if (sticks < 1 )
+			{
+				winner = true;
+				cout << "\nPlayer 1 WINS!" << endl;
+			}
+		}
+		if (sticks > 0)
+		{
+			cout << "\nPlayer 2, it's your turn!\n" << endl;
+            cout << "The game currently looks like this:\n" << endl;
+            for ( int i = 0; i < sticks; i++ )
+                cout << "|";
+			cout << "\n\nHow many sticks would you like to remove? (1, 2, or 3)\n" << endl;
+			cin >> n;
 
- while ( playing )
- {
-     if (playerOneTurn == true)
-     {
-         cout << "Player 1, it's your turn!\n" << endl;
-         cout << "The game currently looks like this:\n" << endl;
-         for ( int i = 1; i < sticks; i++ )
-            cout << "|";
-         cout << "\n\nHow many sticks would you like to remove? (1, 2, or 3)" << endl;
-         cin >> num;
+			if (n >= 1 && n <= 3 && ( sticks-n >= -1))  //  Checks to make sure number of sticks is correct.
+			{
+				sticks -= n;
+			}
+			else
+			{
+				cout << "INVALID INPUT!\n" << endl;
+			}
+			if (sticks < 1 )
+			{
+				winner = true;
+				cout << "\nPlayer 2 WINS!" << endl;
+			}
+		}
 
+	}while(!winner);
 
-
- }
 }
-
-//    cout << "\n\nHow many sticks would you like to remove? (1, 2, or 3)\n" << endl;
-//    cin >> num;
-//
-//    if ( num >= 1 && num <= 3 && num <= sticks )
-//        {
-//        sticks -= num;
-//        cout << "\nThe game looks like this:\n" << endl;
-//        for ( int i = 1; i < sticks; i++ )
-//            cout << "|";
-//        }
-//    else if ( num >= sticks )
-//    {
-//        cout << "Please select a number smaller than the amount of sticks left. " << endl;
-//        cin >> num;
-//    }
-//    else
-//        cout << "Please choose 1, 2 or 3. " << endl;
-//        cin >> num;
-//
-//    if ( sticks = 0 )
-//        playing == false;
-//
-//
-//
-//
-//
-// }
-// // 1 -- display board
-// // should use for loop
-////
-////    cout << "How many sticks would you like to remove? (1, 2, or 3)" << endl;
-////    cin >> num;
-////
-//    if ( num >= 1 && num <= 3 )
-//        {
-//        sticks -= num;
-//        cout << "The game looks like this: " << endl;
-//        cout << sticks << endl;
-//        }
-//    else
-//        cout << "Pleaes choose 1, 2 or 3. " << endl;
-//        cin >> num;
-//
-//    if ( sticks = 0 )
-//        playing == false;
-//
-//
-// // 2 -- get and validate input
-// // integer between 1 and 3
-// // not greater than remaining sticks
-//
-// // 3 -- update board
-// // subtract move from number of sticks remaining
-//
-// // 4 -- see if done
-// // if number of sticks is zero, set playing to false
-//
-// // 5 -- if not done, alternate player
-// // if player 1, go to player 2
-// // if player 2, go to player 1
-//
-// // announce winner using player number
-//
-//
-//
-// // announce winner using player number
-//
-// return 0;
-//}
-//int board(int x)
-//{
-//    for ( int i = 1; i > x; i++ )
-//    cout << "|";
-//}
-////float circle(float x)  //  multiplies the pi by the radius squared
-////{
-////    float area;
-////    area = pi*x*x;
-////    return(area);
-////}
