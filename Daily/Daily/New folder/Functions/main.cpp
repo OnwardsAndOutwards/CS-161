@@ -2,33 +2,34 @@
 
 using namespace std;
 
-int power(int, int);
+bool isLeapYear(int);
+
 
 int main()
 {
-    int base;
-    int exponent;
 
-    cout << "base: " << endl;
-    cin >> base;
-    cout << "exponent: " << endl;
-    cin >> exponent;
 
-    cout << power(base, exponent);
+
+    int year;
+//    int exponent;
+
+    cout << "year: " << endl;
+    cin >> year;
+
+    cout << isLeapYear(year);
 
 
 }
 
-int power(int base, int exponent)
+bool isLeapYear(int year)
 {
-    int answer = 1;
-
-    for (int i = 1; i <= exponent; i++)
+    if ( ( year % 4 == 0 ) )
     {
-        answer = answer*base;
+        if ( year % 100 != 0 )
+            return false;
+        if ( year % 400 != 0 )
+            return false;
+    return true;
     }
 
-
-    return answer;
 }
-
