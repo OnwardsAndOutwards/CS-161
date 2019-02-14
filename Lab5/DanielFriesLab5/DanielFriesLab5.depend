@@ -1,6 +1,7 @@
 # depslib dependency file v1.0
-1548884157 source:c:\users\tfrie\documents\c++\lab5\danielfrieslab5\main.cpp
+1549766980 source:c:\users\tfrie\documents\c++\lab5\danielfrieslab5\main.cpp
 	<iostream>
+	<string>
 
 1549582252 source:c:\users\student\desktop\cs-161\lab5\danielfrieslab5\main.cpp
 	<iostream>

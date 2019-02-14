@@ -59,7 +59,7 @@ int main()
 			cout << "\n\nHow many sticks would you like to remove? (1, 2, or 3)\n" << endl;
 			cin >> n;
 
-			if (n >= 1 && n <= 3 && ( sticks-n >= -1))  //  Checks to make sure number of sticks is correct.
+			if (n >= 1 && n <= 3 && ( sticks-n >= -1))
 			{
 				sticks -= n;
 			}
