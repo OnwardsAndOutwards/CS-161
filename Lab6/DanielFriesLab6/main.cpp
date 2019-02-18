@@ -1,5 +1,5 @@
 //  Daniel Fries
-//  Lab 5
+//  Lab 6
 //  CS 161+
 //  Computing the area of different shapes.
 
