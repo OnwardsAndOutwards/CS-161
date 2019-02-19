@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1550613619 source:c:\users\student\desktop\cs-161\lab6\danielfrieslab6\main.cpp
+	<iostream>
+	<iomanip>
+
