@@ -36,7 +36,6 @@ char getMove()
 {
     cout << "What is your move?\n\n R = Rock // S = Scissors // P = Paper" << endl;
     cin >> userMove;
-    cout << userMove;
 
     while ( userMove != 'R' or userMove != 'P' or userMove != 'S' )
     {
