@@ -1,7 +1,4 @@
-//  Daniel Fries
-//  Lab 7 Part 2
-//  CS 161+
-//  Guess my Number
+#include <iostream>
 
 using namespace std;
 
