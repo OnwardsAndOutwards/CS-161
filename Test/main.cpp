@@ -1,34 +1,19 @@
+// Random number generator based on seconds elapsed since 1970 (Epoch)
+
+
 #include <iostream>
+#include <ctime>
+#include <cstdlib>
 
 
 using namespace std;
 
-class Student {
-    public:
-        string name;
-        string major;
-        double gpa;
-        Student(string aName, string aMajor, double aGpa){
-            name = aName;
-            major = aMajor;
-            gpa = aGpa;
-
-        }
-
-        bool hasHonors() {
-            if (gpa >= 3.5){
-                return true;
-            }
-            return false;
-        }
-};
+int random;
 
 int main()
 {
-    Student student1("Dan", "CS", 3.5);
-    Student student2("Cory", "Eng", 4.2);
 
-    cout << student1.hasHonors();
-
-    return 0;
+    srand(time(NULL));
+    random = (rand() %3) + 1;  //  Generates a number 1-3
+    cout << random;
 }
