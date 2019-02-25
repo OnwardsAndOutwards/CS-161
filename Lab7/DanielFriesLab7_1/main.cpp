@@ -9,8 +9,8 @@
 
 using namespace std;
 
-char computerMove, userMove, replay;
-int random;
+char computerMove, userMove;
+//  int random;
 char displayInstructions();
 char getMove();
 char getComputerMove();
@@ -18,22 +18,16 @@ int getWinner(char computerMove, char userMove);
 bool playAgain();
 
 int main()
-{   do
-    {
+{
+    cout << "Welcome to Rock, Paper, Scissors!\n\n" << endl;
+    cout << displayInstructions() << endl;
 
-        cout << "Welcome to Rock, Paper, Scissors!\n\n" << endl;
-        cout << displayInstructions() << endl;
+    do
+    {
         getMove();
         getComputerMove();
         getWinner(computerMove, userMove);
         playAgain();
-
-
-
-        bool playing = true;
-
-
-        return 0;
 
     }while (playAgain());
 
@@ -48,13 +42,14 @@ char getMove()  //  Requests, checks and returns the player move
 {
     cout << "What is your move?\n\nR = Rock // S = Scissors // P = Paper\n" << endl;
     cin >> userMove;
-//    while (userMove!='R'||userMove!='S'||userMove!='P')  //  FIX ME!
-//    {
-//        cout << "Invalid input!  Try again." << endl;
-//        cin >> userMove;
-//    }
+
     userMove = tolower(userMove);  //  Uppercase to lowercase.
-        switch (userMove)
+    while (userMove!='r'&&userMove!='s'&&userMove!='p')
+    {
+        cout << "Invalid input!  Try again." << endl;
+        cin >> userMove;
+    }
+    switch (userMove)
     {
         case 'r':
             userMove = 'r';
@@ -76,7 +71,7 @@ char getMove()  //  Requests, checks and returns the player move
 char getComputerMove()  //  Computer's move is bases on random number generation.
 {
     srand(time(NULL));
-    random = (rand() %3) + 1;  //  Random number 1-3
+    int random = (rand() %3) + 1;  //  Random number 1-3
     switch (random)
     {
         case 1:
@@ -129,8 +124,10 @@ int getWinner(char computerMove, char userMove)  //  Switch statements and condi
 }
 bool playAgain()  //  Asks the user for input as to weather they want to replay.
 {
-    cout << "Would you like to play again? (y/n)" << endl;  // FIX ME!
+    char replay;
+    cout << "\nWould you like to play again? (y/n)" << endl;  // FIX ME!
     cin >> replay;
+    cout << replay << endl;
     if (replay=='y')
         return true;
     else
