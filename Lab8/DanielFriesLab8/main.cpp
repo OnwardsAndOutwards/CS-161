@@ -12,6 +12,10 @@
  *
  *******************************/
 
+// The peice of code missing is how it is SCORED
+
+// There are other rules and fun shit that can be included.
+
 using namespace std;
 
 void printRoll(int n1, int n2, int n3, int n4, int n5);
@@ -27,13 +31,15 @@ int getScoreOption(int onesScore, int twosScore, int threesScore, int foursScore
                    int fourOfAKind, int fullHouse, int smallStraight,
                    int largeStraight, int yahtzee, int chance);
 int tabulateDice(int n, int d1, int d2, int d3, int d4, int d5);
+//  Paul started here, there will be many of these functions
+int scoreOnes (int ones, int twos, int threes, int fours, int fives, int sixes);
 
 const int NUM_CATEGORIES = 13;
 const int SIDES = 6;
 const int EMPTY = -1;
 enum Category { ONES = 1, TWOS, THREES, FOURS, FIVES, SIXES, THREE_OF_A_KIND,
                     FOUR_OF_A_KIND, FULL_HOUSE, SMALL_STRAIGHT, LARGE_STRAIGHT,
-                    YAHTZEE, CHANCE };
+                    YAHTZEE, CHANCE };  //  enum not covered in class
 
 int main()
 {
@@ -404,4 +410,8 @@ int tabulateDice(int n, int d1, int d2, int d3, int d4, int d5)
     if (d4 == n) ans++;
     if (d5 == n) ans++;
     return ans;
+}
+int scoreOnes (int ones, int twos, int threes, int fours, int fives, int sixes)
+{
+    //  Lets fucking do this!
 }
