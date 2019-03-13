@@ -1,3 +1,9 @@
+// CS161+
+// Daniel Fries
+// Lab 8
+// Yahtzee
+
+
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
@@ -31,8 +37,11 @@ int getScoreOption(int onesScore, int twosScore, int threesScore, int foursScore
                    int fourOfAKind, int fullHouse, int smallStraight,
                    int largeStraight, int yahtzee, int chance);
 int tabulateDice(int n, int d1, int d2, int d3, int d4, int d5);
+
 //  Paul started here, there will be many of these functions
+
 int scoreOnes (int ones, int twos, int threes, int fours, int fives, int sixes);
+
 
 const int NUM_CATEGORIES = 13;
 const int SIDES = 6;
@@ -123,7 +132,7 @@ int main()
                                          fourOfAKind, fullHouse, smallStraight,
                                          largeStraight, yahtzee, chance);
 
-        /*switch (scoreOption)
+        switch (scoreOption)
         {
             case ONES:
                 onesScore = scoreOnes(ones, twos, threes, fours, fives, sixes);
@@ -164,7 +173,7 @@ int main()
             case CHANCE:
                 chance = scoreChance(ones, twos, threes, fours, fives, sixes);
                 break;
-        }*/
+        }
 
         printScore(onesScore, twosScore, threesScore, foursScore, fivesScore, sixesScore,
                    threeOfAKind, fourOfAKind, fullHouse, smallStraight, largeStraight, yahtzee, chance);

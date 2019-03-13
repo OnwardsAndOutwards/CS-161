@@ -1,8 +1,5 @@
-// Random number generator based on seconds elapsed since 1970 (Epoch)
-
-
 #include <iostream>
-#include <ctime>
+#include <fstream>
 #include <cstdlib>
 
 
@@ -12,8 +9,13 @@ int random;
 
 int main()
 {
+    ofstream outFile;
 
-    srand(time(NULL));
-    random = (rand() %3) + 1;  //  Generates a number 1-3
-    cout << random;
+    outFile.open("sample.txt");
+
+    outFile << "First Number: " << 5 << endl;
+
+    outFile.close();
+
+    return 0;
 }
